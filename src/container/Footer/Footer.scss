@@ -91,7 +91,7 @@
             height: 170px;
         }
 
-        &:hover {
+        &:hover, &:focus {
             box-shadow: 0 0 25px var(--primary-color);
         }
     }

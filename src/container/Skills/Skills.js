@@ -25,7 +25,9 @@ const Skills = () => {
 
   return (
     <>
-      <h2 className="head-text">Skills & Experiences</h2>
+      <h2 className="head-text">
+        Skills <span>&</span> Experiences
+      </h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
@@ -38,7 +40,7 @@ const Skills = () => {
             >
               <div
                 className="app__flex"
-                style={{ backgroundColor: skill.bgColor }}
+                style={{ backgroundColor: skill.bgColor.value }}
               >
                 <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
@@ -68,6 +70,7 @@ const Skills = () => {
                     </motion.div>
                     <ReactTooltip
                       id={work.name}
+                      html={true}
                       effect="solid"
                       arrowColor="#fff"
                       className="skills-tooltip"

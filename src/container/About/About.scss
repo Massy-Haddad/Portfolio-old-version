@@ -13,7 +13,7 @@
 }
 
 .app__profile-item {
-    width: 190px;
+    width: 320px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -22,13 +22,13 @@
 
     img {
         width: 100%;
-        height: 170px;
+        height: 220px;
         border-radius: 15px;
         object-fit: cover;
     }
 
     @media screen and (min-width: 2000px) {
-        width: 370px;
+        width: 600px;
         margin: 2rem 4rem;
 
         img {

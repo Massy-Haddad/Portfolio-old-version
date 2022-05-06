@@ -22,6 +22,7 @@ const About = () => {
         “First, solve the <span>problem</span>.<br />
         Then write the <span>code</span>.”{/* <br />– John Johnson */}
       </h2>
+      <p className="p-text">▬ John Johnson ▬</p>
 
       <div className="app__profiles">
         {abouts.map((about, index) => (

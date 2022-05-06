@@ -2,42 +2,56 @@
   flex: 1;
   width: 100%;
   flex-direction: column;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .app__testimonial-item {
-  width: 60%;
-  min-height: 320px;
-  background-color: var(--white-color);
-  display: flex;
-  flex-direction: row;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-
+  width: 100%;
+  min-height: 300px;
   transition: all 0.3s ease-in-out;
+
+  .app__testimonial-item-slider {
+    width: 50%;
+    min-height: 300px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: var(--white-color);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    touch-action: pan-y;
+    z-index: 1;
+  
+    transition: all 0.3s ease-in-out;
+   
+    @media screen and (min-width: 2000px) {
+      min-height: 450px;
+  
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  
+    @media screen and (max-width: 850px) {
+      width: 100%;
+    }
+  
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
 
   img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover; // or contain
-  }
-
-  @media screen and (min-width: 2000px) {
-    min-height: 450px;
-
-    img {
-      width: 150px;
-      height: 150px;
-    }
-  }
-
-  @media screen and (max-width: 850px) {
-    width: 100%;
-  }
-
-  @media screen and (max-width: 600px) {
-    flex-direction: column;
   }
 }
 
@@ -86,6 +100,9 @@
   flex-direction: row;
   margin-top: 1rem;
 
+  // position: absolute;
+  // bottom: 8rem;
+
   div {
     width: 50px;
     height: 50px;
@@ -119,22 +136,26 @@
       }
     }
   }
+  @media screen and (max-width: 800px) {
+    // bottom: 5rem;      
+  }
 }
 
 .app__testimonial-brands {
   width: 80%;
   flex-wrap: wrap;
-  margin-top: 2rem;
 
   div {
     width: 150px;
     margin: 1.5rem;
 
     img {
-      width: 100%;
+      width: 110%;
       height: auto;
       object-fit: cover;
       filter: grayscale(1);
+
+      transition: all 0.3s ease;
     }
 
     &:hover {

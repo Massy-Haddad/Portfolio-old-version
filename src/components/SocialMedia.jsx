@@ -19,7 +19,7 @@ const SocialMedia = () => {
         </div>
       </a>
 
-      <a href="#home">
+      <a href="#work">
         <div>
           <BsFolder />
         </div>
