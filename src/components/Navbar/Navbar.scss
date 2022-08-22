@@ -114,6 +114,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
+    overflow: auto;
 
     background: url("../../assets/bgWhite.png");
     background-color: var(--white-color);
